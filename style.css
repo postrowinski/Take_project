@@ -1,566 +1,132 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700i');
-/* GENERAL */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: "Open Sans";
-    color: #fff;   
-    font-size: 14px;
-    font-weight: 300;  
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.row:before, .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-[class*="col-"] {
-    float: left;
-    min-height: 1px;
-    padding: 10px;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-.col-offset-0 {margin-left: 0;}
-.col-offset-1 {margin-left: 8.33%;}
-.col-offset-2 {margin-left: 16.66%;}
-.col-offset-3 {margin-left: 25%;}
-.col-offset-4 {margin-left: 33.33%;}
-.col-offset-5 {margin-left: 41.66%;}
-.col-offset-6 {margin-left: 50%;}
-.col-offset-7 {margin-left: 58.33%;}
-.col-offset-8 {margin-left: 66.66%;}
-.col-offset-9 {margin-left: 75%;}
-.col-offset-10 {margin-left: 83.33%;}
-.col-offset-11 {margin-left: 91.66%;}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
-.text-bold {
-    font-weight: 700;
-}
-
-.text-light {
-    font-weight: 300;
-}
-
-h2 {
-    font-size: 35px;
-    font-weight: 300;
-}
-
-h3 {
-    font-size: 13px;
-    font-weight: 600;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-p {
-    line-height: 24px;
-    font-weight: 400;
-}
-
-button {
-    padding: 18px 30px;
-    border-radius: 3px;
-    background: #82ca9c;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-section > .container {
-    margin: 50px auto;
-}
-
-/* HEADER */
-header {
-    min-height: 950px;
-    background: url('http://postrowinski2.students.alx.pl/project-plus/header-bg.jpg') no-repeat center center;
-    background-size: cover;
-}
-
-header .container {
-    padding-top: 50px; 
-}
-
-.logo, .logo:before {
-    border: 3px solid #fff;
-    border-radius: 50%;
-    background: transparent;  
-}
-
-.logo {
-    margin-left: 12px;
-    width: 41px;
-    height: 41px;
-    position: relative;
-}
-
-.logo:before, .logo:after {
-    position: absolute;
-}
-
-.logo:before {
-    content: "";
-    width: 11px;
-    height: 11px;
-    top: 9px;
-    left: 9px;
-}
-
-.logo:after {
-    top: 5px;
-    left: 50px;
-    content: "take";
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
-    font-style: italic;
-}
-
-header h1 {
-    font-size: 60px;
-    font-weight: 300;
-    margin-bottom: 0;
-}
-
-header .container > .row > [class*="col-"] {
-    position: absolute;
-    top: calc(50% - 50px);
-    transform: translateY(-50%);
-}
-
-header p {
-    font-size: 13px;
-    margin-left: 5px;
-}
-
-header .side-info {
-    position: absolute;
-    transform: rotate(-90deg);
-    top: 50%;
-    text-transform: uppercase;
-}
-
-header .side-info span:first-child {
-    margin-right: 25px;
-}
-
-article {
-    color: #000;
-}
-
-article h2 {
-    margin-top: 80px;
-}
-
-article p {
-    margin-bottom: 30px;
-    color: #959595;
-}
-
-article .phone-img {
-    position: relative;
-    min-height: 243px; 
-}
-
-article .phone-img  img {
-    position: absolute;
-    top: -720px;
-    right: -50px;
-}
-
-/* GALLERY*/
-.gallery {
-    overflow-x: hidden;
-}
-
-.gallery h2 {
-    font-size: 30px;
-}
-
-.gallery .container [class*="col-"] {
-    padding: 0;
-}
-
-.gallery .box {
-    min-height: 278px;
-    width: 100%;
-    padding: 25px 40px;
-    position: relative;
-}
-
-.gallery .box a {
-    position: absolute;
-    bottom: 15px;
-    font-weight: 700;
-}
-
-.gallery .box a span, .old-car a span {
-    margin-left: 10px;
-}
-
-.gallery .fa {
-    font-size: 18px;
-    position: absolute;
-    bottom: 30px;
-    right: 50px;   
-}
-
-.box-pink {
-    background: #f5989d;
-}
-
-.box-grey {
-    background: #615f7d;
-}
-
-.box-img-1, .gallery .row:last-of-type .box > .box {
-    background: url('http://postrowinski2.students.alx.pl/project-plus/gallery-img-1.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.box-img-2 {
-    background: url('http://postrowinski2.students.alx.pl/project-plus/gallery-img-2.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.box-green {
-    background: #82ca9c;
-}
-
-.gallery .box > .box {
-    position: absolute;
-    left: 100%;
-    top: 0;
-}
-
-.gallery .row:first-of-type .box > .box {
-    background: #bd8cbf;
-}
-
-/* DETAILS */
-
-.details h2 {
-    color: #222626
-}
-
-.details h3 {
-    color: #67676d;
-}
-
-.details p {
-    color: #959595;
-}
-
-/* OLD-CAR */
-.old-car {
-    margin-top: 100px;
-    min-height: 870px;
-    background: url('http://postrowinski2.students.alx.pl/project-plus/next-bg.jpg') center center no-repeat;
-    background-size: cover;
-}
-
-.old-car .container {
-    margin-bottom: 0;
-}
-
-.old-car .row > [class*="col-"] {
-    min-height: 870px;
-    position: relative;
-}
-
-.old-car .car-content {
-    position: absolute;
-    top: 50%;
-}
-
-.old-car h2 {
-    font-size: 56px;
-    font-weight: 300;
-}
-
-.old-car a {
-    display: inline-block;
-}
-
-/* REASONS */
-
-.reasons {
-    min-height: 535px;
-    background: #82ca9c;
-}
-
-.reasons .container, .offert .container {
-    margin: 0 auto;
-}
-
-.reasons h2 {
-    margin: 120px 0 15px;
-}
-
-/* OFFERT */
-.offert {
-    background: #f6f7fa;
-    min-height: 600px;
-}
-
-.offert [class*="col-"] {
-    padding: 40px 90px 40px 50px;
-    min-height: 380px;
-    margin-top: 100px;
-    transition: 0.2s;
-}
-
-.offert [class*="col-"]:hover {
-    background: #fff;
-    box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.05);
-}
-
-.offert span {
-    padding: 7px 11px;
-    text-transform: uppercase;
-    line-height: 22px;
-    font-weight: 700;
-    font-size: 11px;
-    border-radius: 5px;
-    background: #e1e1e1;
-}
-
-.offert .row > [class*="col-"]:last-of-type span {
-    background: #bd8cbf;
-} 
-
-.offert h2 {
-    font-size: 30px;
-    color: #2e3b4e;
-}
-
-.offert p {
-    color: #8297a7;
-}
-
-.offert .row .row {
-    margin-top: 20px;
-}
-
-.offert .fa {
-    color: #c5c5c5;
-    font-size: 24px;
-    margin-right: 8px;
-}
-
-/* FOOTER */
-footer {
-    background: #192431;
-    min-height: 600px;
-    color: #f6f7fa;
-}
-
-footer .container {
-    padding-top: 130px;
-}
-
-footer p {
-    font-size: 13px;
-}
-
-footer .row .row {
-    margin-top: 40px;
-}
-
-footer .row .row [class*="col-"] {
-    padding-left: 0;
-}
-
-footer a {
-    line-height: 24px;
-}
-
-footer input[type="text"] {
-    height: 58px;
-    width: 85%;
-    font-size: 20px;
-    border: none;
-}
-
-footer form {
-    margin-bottom: -40px;
-}
-
-footer form a {
-    width: 15%;
-    height: 58px;
-    float: right;
-    border-radius: 0;
-    font-size: 24px;
-    background: #82ca9c;
-    display: inline-block;
-    text-align: center;
-    line-height: 58px;   
-}
-
-footer .row .row [class*="col-"] p {
-    font-size: 12px;
-    color: #57697f;
-    line-height: 18px;
-}
-/* MEDIA */
-
-@media (max-width: 1500px) {
-    
-    header .side-info {
-    top: 80%;
-    left: -50px;
-    }
-}
-
-@media (max-width: 1200px) {
-       
-    header [class*="col"] {
-        width: 50%;
-    }
-    
-    .phone-img {
-        display: none;
-    }
-    
-    article [class*="col"] {
-        width: 100%;
-    }
-    
-    article [class*="col"]:first-of-type {
-        padding-bottom: 0
-    }
-    
-    article [class*="col"]:last-of-type {
-        padding-top: 0;
-    }
-    
-    .gallery .box > .box {
-        display: none;
-    }
-    
-    .old-car {
-        background: url('http://postrowinski2.students.alx.pl/project-plus/next-bg.jpg') left center no-repeat;
-        background-size: cover;
-    }
-    
-    .old-car [class*="col"] {
-        width: 66.66%;
-    }
-    
-    .old-car .car-content {
-        top: 25%;
-    }
-}
-
-@media (max-width: 1200px) and (min-width: 993px) {
-      
-}
-
-@media (max-width: 1200px) and (min-width: 769px) {
-    
-}
-
-@media (max-width: 992px) and (min-width: 769px){
-    
-}
-
-@media (max-width: 992px) {
-    .gallery [class*="col"] {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    
-    .gallery .box {
-        padding: 15px 20px;
-    }
-    
-    .details .row:last-child [class*="col"] {
-        width: 50%;
-    }
-    
-    .old-car [class*="col"] {
-        width: 100%;
-    }
-    
-    .old-car .car-content {
-        padding: 0 15px;
-    } 
-    
-    .reasons .row:last-of-type [class*="col"] {
-        width: 100%;
-    }
-    
-    .reasons .row:last-of-type [class*="col"]:last-of-type {
-        padding-bottom: 120px;
-    }
-    
-    .offert [class*="col"] {
-        width: 100%;
-    }
-    
-    .offert [class*="col"]:last-of-type {
-        margin-bottom: 100px;
-    }
-    
-    footer .row > [class*="col"] {
-        width: 100%;
-    }
-    
-    footer .row .row [class*="col-"] {
-        text-align: center;
-    }
-       
-}
-
-@media (max-width: 450px) {
-    .details .row:last-child [class*="col"] {
-        width: 100%;
-    }
-    
-    footer .row [class*="col"]:first-child .row [class*="col"] {
-        width: 100%;
-    }  
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic);@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700i');*{box-sizing:border-box;}
+body{margin:0;font-family:"Open Sans";color:#fff;font-size:14px;font-weight:300;}
+.container{max-width:1200px;margin:0 auto;}
+.row:before, .row:after{content:"";display:table;clear:both;}
+[class*="col-"]{float:left;min-height:1px;padding:10px;}
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+.col-offset-0{margin-left:0;}
+.col-offset-1{margin-left:8.33%;}
+.col-offset-2{margin-left:16.66%;}
+.col-offset-3{margin-left:25%;}
+.col-offset-4{margin-left:33.33%;}
+.col-offset-5{margin-left:41.66%;}
+.col-offset-6{margin-left:50%;}
+.col-offset-7{margin-left:58.33%;}
+.col-offset-8{margin-left:66.66%;}
+.col-offset-9{margin-left:75%;}
+.col-offset-10{margin-left:83.33%;}
+.col-offset-11{margin-left:91.66%;}
+.text-center{text-align:center;}
+.text-justify{text-align:justify;}
+.text-bold{font-weight:700;}
+.text-light{font-weight:300;}
+h2{font-size:35px;font-weight:300;}
+h3{font-size:13px;font-weight:600;}
+a{text-decoration:none;color:#fff;}
+p{line-height:24px;font-weight:400;}
+button{padding:18px 30px;border-radius:3px;background:#82ca9c;color:#fff;border:none;cursor:pointer;text-transform:uppercase;font-weight:700;text-align:center;letter-spacing:1px;}
+section > .container{margin:50px auto;}
+header{min-height:950px;background:url('http://postrowinski2.students.alx.pl/project-plus/header-bg.jpg') no-repeat center center;background-size:cover;}
+header .container{padding-top:50px;}
+.logo, .logo:before{border:3px solid #fff;border-radius:50%;background:transparent;}
+.logo{margin-left:12px;width:41px;height:41px;position:relative;}
+.logo:before, .logo:after{position:absolute;}
+.logo:before{content:"";width:11px;height:11px;top:9px;left:9px;}
+.logo:after{top:5px;left:50px;content:"take";color:#fff;font-size:18px;font-family:'Merriweather', serif;font-weight:700;font-style:italic;}
+header h1{font-size:60px;font-weight:300;margin-bottom:0;}
+header .container > .row > [class*="col-"]{position:absolute;top:calc(50% - 50px);transform:translateY(-50%);}
+header p{font-size:13px;margin-left:5px;}
+header .side-info{position:absolute;transform:rotate(-90deg);top:50%;text-transform:uppercase;}
+header .side-info span:first-child{margin-right:25px;}
+article{color:#000;}
+article h2{margin-top:80px;}
+article p{margin-bottom:30px;color:#959595;}
+article .phone-img{position:relative;min-height:243px;}
+article .phone-img img{position:absolute;top:-720px;right:-50px;}
+.gallery{overflow-x:hidden;}
+.gallery h2{font-size:30px;}
+.gallery .container [class*="col-"]{padding:0;}
+.gallery .box{min-height:278px;width:100%;padding:25px 40px;position:relative;}
+.gallery .box a{position:absolute;bottom:15px;font-weight:700;}
+.gallery .box a span, .old-car a span{margin-left:10px;}
+.gallery .fa{font-size:18px;position:absolute;bottom:30px;right:50px;}
+.box-pink{background:#f5989d;}
+.box-grey{background:#615f7d;}
+.box-img-1, .gallery .row:last-of-type .box > .box{background:url('http://postrowinski2.students.alx.pl/project-plus/gallery-img-1.jpg') center center no-repeat;background-size:cover;}
+.box-img-2{background:url('http://postrowinski2.students.alx.pl/project-plus/gallery-img-2.jpg') center center no-repeat;background-size:cover;}
+.box-green{background:#82ca9c;}
+.gallery .box > .box{position:absolute;left:100%;top:0;}
+.gallery .row:first-of-type .box > .box{background:#bd8cbf;}
+.details h2{color:#222626}
+.details h3{color:#67676d;}
+.details p{color:#959595;}
+.old-car{margin-top:100px;min-height:870px;background:url('http://postrowinski2.students.alx.pl/project-plus/next-bg.jpg') center center no-repeat;background-size:cover;}
+.old-car .container{margin-bottom:0;}
+.old-car .row > [class*="col-"]{min-height:870px;position:relative;}
+.old-car .car-content{position:absolute;top:50%;}
+.old-car h2{font-size:56px;font-weight:300;}
+.old-car a{display:inline-block;}
+.reasons{min-height:535px;background:#82ca9c;}
+.reasons .container, .offert .container{margin:0 auto;}
+.reasons h2{margin:120px 0 15px;}
+.offert{background:#f6f7fa;min-height:600px;}
+.offert [class*="col-"]{padding:40px 90px 40px 50px;min-height:380px;margin-top:100px;transition:0.2s;}
+.offert [class*="col-"]:hover{background:#fff;box-shadow:0px 0px 62px 0px rgba(0,0,0,0.05);}
+.offert span{padding:7px 11px;text-transform:uppercase;line-height:22px;font-weight:700;font-size:11px;border-radius:5px;background:#e1e1e1;}
+.offert .row > [class*="col-"]:last-of-type span{background:#bd8cbf;}
+.offert h2{font-size:30px;color:#2e3b4e;}
+.offert p{color:#8297a7;}
+.offert .row .row{margin-top:20px;}
+.offert .fa{color:#c5c5c5;font-size:24px;margin-right:8px;}
+footer{background:#192431;min-height:600px;color:#f6f7fa;}
+footer .container{padding-top:130px;}
+footer p{font-size:13px;}
+footer .row .row{margin-top:40px;}
+footer .row .row [class*="col-"]{padding-left:0;}
+footer a{line-height:24px;}
+footer input[type="text"]{height:58px;width:85%;font-size:20px;border:none;}
+footer form{margin-bottom:-40px;}
+footer form a{width:15%;height:58px;float:right;border-radius:0;font-size:24px;background:#82ca9c;display:inline-block;text-align:center;line-height:58px;}
+footer .row .row [class*="col-"] p{font-size:12px;color:#57697f;line-height:18px;}
+@media (max-width:1500px){header .side-info{top:80%;left:-50px;}
+}
+@media (max-width:1200px){header [class*="col"]{width:50%;}
+.phone-img{display:none;}
+article [class*="col"]{width:100%;}
+article [class*="col"]:first-of-type{padding-bottom:0}
+article [class*="col"]:last-of-type{padding-top:0;}
+.gallery .box > .box{display:none;}
+.old-car{background:url('http://postrowinski2.students.alx.pl/project-plus/next-bg.jpg') left center no-repeat;background-size:cover;}
+.old-car [class*="col"]{width:66.66%;}
+.old-car .car-content{top:25%;}
+}
+@media (max-width:1200px) and (min-width:993px){}
+@media (max-width:1200px) and (min-width:769px){}
+@media (max-width:992px) and (min-width:769px){}
+@media (max-width:992px){.gallery [class*="col"]{width:100%;}
+}
+@media (max-width:768px){.gallery .box{padding:15px 20px;}
+.details .row:last-child [class*="col"]{width:50%;}
+.old-car [class*="col"]{width:100%;}
+.old-car .car-content{padding:0 15px;}
+.reasons .row:last-of-type [class*="col"]{width:100%;}
+.reasons .row:last-of-type [class*="col"]:last-of-type{padding-bottom:120px;}
+.offert [class*="col"]{width:100%;}
+.offert [class*="col"]:last-of-type{margin-bottom:100px;}
+footer .row > [class*="col"]{width:100%;}
+footer .row .row [class*="col-"]{text-align:center;}
+}
+@media (max-width:450px){.details .row:last-child [class*="col"]{width:100%;}
+footer .row [class*="col"]:first-child .row [class*="col"]{width:100%;}
 }
